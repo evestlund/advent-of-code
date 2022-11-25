@@ -1,0 +1,23 @@
+{
+  "name": "advent-of-code",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evestlund/advent-of-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evestlund/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/evestlund/advent-of-code#readme",
+  "devDependencies": {
+    "mocha": "^10.1.0"
+  }
+}
