@@ -2,13 +2,13 @@ import assert from 'node:assert';
 import { URL } from 'node:url';
 import { readFile } from 'node:fs/promises';
 
-import { a, b } from '../solvers/2021_01.js';
+import { a, b } from '../../2021/01.js';
 
 describe('2021_01', () => {
   let input;
 
   it('read input', async () => {
-    const filePath = new URL('./input/2021_01.txt', import.meta.url);
+    const filePath = new URL('../input/2021/01.txt', import.meta.url);
     const contents = await readFile(filePath, { encoding: 'utf8' });
 
     input = contents
