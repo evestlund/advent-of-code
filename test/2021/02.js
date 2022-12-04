@@ -8,7 +8,7 @@ describe('2021_02', () => {
   let input;
 
   it('read input', async () => {
-    const filePath = new URL('../input/2021/02.txt', import.meta.url);
+    const filePath = new URL('./input/02.txt', import.meta.url);
     const contents = await readFile(filePath, { encoding: 'utf8' });
 
     input = contents
