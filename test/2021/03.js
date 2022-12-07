@@ -2,7 +2,7 @@ import assert from 'node:assert';
 import { URL } from 'node:url';
 import { readFile } from 'node:fs/promises';
 
-import { a } from '../../2021/03.js';
+import { a, b } from '../../2021/03.js';
 
 describe('2021_03', () => {
   let input;
@@ -38,7 +38,7 @@ describe('2021_03', () => {
     assert.equal(powerConsumption, 2724524);
   });
 
-  it.skip('test B', () => {
+  it('test B', () => {
     const lifeSupportRating = b([
       '00100',
       '11110',
@@ -56,8 +56,8 @@ describe('2021_03', () => {
     assert.equal(lifeSupportRating, 230);
   });
 
-  it.skip('solve B', () => {
+  it('solve B', () => {
     const lifeSupportRating = b(input);
-    assert.equal(lifeSupportRating, 1971232560);
+    assert.equal(lifeSupportRating, 2775870);
   });
 });
