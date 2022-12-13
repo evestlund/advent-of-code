@@ -37,7 +37,7 @@ export function a(monkeys) {
 export function b(monkeys) {
   const counts = Array.from({ length: monkeys.length }, () => 0);
 
-  const modulo = monkeys.reduce((product, val) => product * val.test, 1);
+  const leastCommonMultipleIsh = monkeys.reduce((product, monkey) => product * monkey.test, 1);
 
   Array.from({ length: 10000 }, (_, round) => {
     monkeys.forEach((monkey, index) => {
@@ -55,14 +55,12 @@ export function b(monkeys) {
           : monkey.operation.includes('*')
           ? level * operationValue : 0;
 
-        const worryLevel = changedLevel % modulo;
-
-        // console.log(level, monkey.operation, '=', changedLevel, '%', monkey.test, worryLevel);
+        const newWorryLevel = changedLevel % leastCommonMultipleIsh;
   
-        const testPasses = changedLevel % monkey.test === 0
+        const testPasses = newWorryLevel % monkey.test === 0
         
-        if (testPasses) monkeys[monkey.true].items = monkeys[monkey.true].items.concat([worryLevel])
-        else monkeys[monkey.false].items = monkeys[monkey.false].items.concat([worryLevel])
+        if (testPasses) monkeys[monkey.true].items = monkeys[monkey.true].items.concat([newWorryLevel])
+        else monkeys[monkey.false].items = monkeys[monkey.false].items.concat([newWorryLevel])
       })
 
       monkey.items = [];
