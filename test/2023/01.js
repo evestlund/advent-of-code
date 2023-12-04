@@ -105,7 +105,7 @@ import assert from 'node:assert';
 import { URL } from 'node:url';
 import { readFile } from 'node:fs/promises';
 
-describe.only('2023_01', () => {
+describe('2023_01', () => {
   it('test A', () => {
     const result = a(`1abc2
 pqr3stu8vwx
